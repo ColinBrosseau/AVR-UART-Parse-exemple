@@ -1,14 +1,12 @@
 /*************************************************************************
-Title:    example program for the Interrupt controlled UART library
-Author:   Peter Fleury <pfleury@gmx.ch>   http://jump.to/fleury
-File:     $Id: test_uart.c,v 1.5 2012/09/14 17:59:08 peter Exp $
-Software: AVR-GCC 3.4, AVRlibc 1.4
-Hardware: any AVR with built-in UART, tested on AT90S8515 at 4 Mhz
+Parsing UART commands exemple
 
-DESCRIPTION:
-          This example shows how to use the UART library uart.c
+based on www.adnbr.co.uk/articles/parsing-simple-usart-commands
+
+uses Peter Fleury's uart library http://homepage.hispeed.ch/peterfleury/avr-software.html#libs
 
 *************************************************************************/
+
 #include <stdlib.h>
 #include <avr/io.h>
 #include <avr/interrupt.h>
