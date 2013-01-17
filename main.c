@@ -125,7 +125,20 @@ int main(void)
   uart_puts(RETURN_NEWLINE);
   uart_puts("Command parsing demo");
   uart_puts(RETURN_NEWLINE);
- 
+  uart_puts(RETURN_NEWLINE);
+  uart_puts("End each input with enter key");
+  uart_puts(RETURN_NEWLINE);
+  uart_puts("This demo has two parameters: a and goto.");
+  uart_puts(RETURN_NEWLINE);
+  uart_puts("To set a parameter: a=45 (or any number)");
+  uart_puts(RETURN_NEWLINE);
+  uart_puts("To query a parameter: a?");
+  uart_puts(RETURN_NEWLINE);
+  uart_puts("No difference with case: a? is the same thing as A?");
+  uart_puts(RETURN_NEWLINE);
+  uart_puts("Illegal values set parameter to zero: a=t66");
+  uart_puts(RETURN_NEWLINE);
+
   while (1)
     {
       /*
