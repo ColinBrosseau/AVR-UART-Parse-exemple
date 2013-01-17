@@ -12,7 +12,6 @@ uses Peter Fleury's uart library http://homepage.hispeed.ch/peterfleury/avr-soft
 #include <avr/interrupt.h>
 #include <avr/pgmspace.h>
 #include <string.h>
-
 #include "uart.h"
 
 #define TRUE 1
@@ -92,7 +91,8 @@ void print_value (char *id, int value)
 
 void uart_ok()
 {
-    uart_puts("OK\r\n");
+  uart_puts("OK");
+  uart_puts(RETURN_NEWLINE);
 }
 
 int main(void)
@@ -122,13 +122,13 @@ int main(void)
    *  uart_puts() blocks if it can not write the whole string to the circular 
    *  buffer
    */
-  uart_puts("-----\r\n");
-  uart_puts("AVR U1000\r\n");
+  uart_puts("----- RETURN_NEWLINE");
+  uart_puts("AVR U1000 RETURN_NEWLINE");
   
   /*
    * Transmit string from program memory to UART
    */
-  uart_puts("Version 1.9\r\n");
+  uart_puts("Version 1.9 RETURN_NEWLINE");
   
   
   /* 
@@ -137,7 +137,7 @@ int main(void)
    */     
   itoa( num, buffer, 10);   // convert interger into string (decimal format)         
   uart_puts(buffer);        // and transmit string to UART
-  uart_puts("\r\n");
+  uart_puts(" RETURN_NEWLINE");
   
   
   /*
@@ -145,7 +145,7 @@ int main(void)
    */
   uart_putc('\r');
   
-  uart_puts_P("patate1 \r\n");
+  uart_puts_P("patate1 RETURN_NEWLINE");
 
   //    for(;;)
   while (1)
