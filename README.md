@@ -14,7 +14,7 @@ Adapt these lines from Makefile to match your configuration:
 
 *main.c*
 
-    #define UART_BAUD_RATE 4800
+    #define UART_BAUD_RATE 57600
 
 *Makefile*
 
@@ -32,7 +32,7 @@ Adapt these lines from Makefile to match your configuration:
 To test it 
 ---
     #Open communication with the microcontroler)
-    screen /dev/ttyUSB1 4800 #for exemple with GNU/Linux
+    screen /dev/ttyUSB1 57600 #for exemple with GNU/Linux
 	
 	#then reset your microcontroler
 	#you should see a greeting message with instructions
