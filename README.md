@@ -28,6 +28,8 @@ Adapt these lines from Makefile to match your configuration:
 	[...]
     AVRDUDE_FLAGS += -b $(AVRDUDE_SPEED)
 
+And run
+	make && make program
 
 To test it 
 ---
