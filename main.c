@@ -16,6 +16,8 @@ for easier microcontroler change.
 #include <string.h>
 #include "uart.h"
 
+#include "main.h"
+
 #define TRUE 1
 #define FALSE 0
 #define CHAR_NEWLINE '\n'
@@ -27,13 +29,6 @@ unsigned char data_in[8];
 char command_in[8];
 int variable_A = 23; //user modifiable variable
 int variable_goto = 12; //user modifiable variable
-
-void copy_command(void);
-void process_command(void);
-void print_value (char *id, int value);
-void uart_ok(void);
-int parse_assignment (char input[16]);
-void process_uart(void);
 
 int parse_assignment (char input[16]) {
   char *pch;
